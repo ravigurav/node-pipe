@@ -1,8 +1,8 @@
 const express  = require('express');
 const app = express();
-
+const port = process.env.PORT || 3000 ;
 app.get('/api' , async(req,res)=>{
     res.send('welcome to the home page')
 })
 
-app.listen(3000);       
+app.listen(port , ()=> console.log('server start on port ' + port));       
